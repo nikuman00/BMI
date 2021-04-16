@@ -20,9 +20,9 @@ public class ListMainActivity extends AppCompatActivity {
 
 
 
-    class personAdapter extends RecyclerView.Adapter<personAdapter.PersonViewHolder>{
+    class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.PersonViewHolder>{
 
-        public personAdapter(@NonNull List<person> personList) {
+        public PersonAdapter(@NonNull List<person> personList) {
             this.personList = personList;
         }
 
@@ -31,13 +31,13 @@ public class ListMainActivity extends AppCompatActivity {
         List<person> personList;
 
         @Override
-        public personAdapter.PersonViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        public PersonAdapter.PersonViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
             View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.bmilist,parent,false);
             return new PersonViewHolder(view);
         }
 
         @Override
-        public void onBindViewHolder(@NonNull personAdapter.PersonViewHolder holder, int position) {
+        public void onBindViewHolder(@NonNull PersonAdapter.PersonViewHolder holder, int position) {
             person p = personList.get(position);
             holder.height.setText(String.valueOf(p.getHeight()));
             holder.weight.setText(String.valueOf(p.getWeight()));
@@ -77,7 +77,7 @@ public class ListMainActivity extends AppCompatActivity {
         List<person> personList = new ArrayList<person>();
         personList.add(p);
         RecyclerView recyclerView = findViewById(R.id.rvBMIList);
-        personAdapter personAdapter = new personAdapter(personList);
+        PersonAdapter personAdapter = new PersonAdapter(personList);
         recyclerView.setAdapter(personAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
