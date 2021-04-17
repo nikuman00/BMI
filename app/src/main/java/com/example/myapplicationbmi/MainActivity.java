@@ -107,11 +107,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showList(View view) {
-        Intent intent = new Intent(this, ListActivity.class);
-        Bundle bundle = new Bundle();
-        bundle.putString("height",height.getText().toString());
-        bundle.putString("weight",weight.getText().toString());
-        intent.putExtras(bundle);
+//        Intent intent = new Intent(this, ListActivity.class);
+        Intent intent = new Intent(this, BMIActiviy.class);
+//        Bundle bundle = new Bundle();
+//        bundle.putString("height",height.getText().toString());
+//        bundle.putString("weight",weight.getText().toString());
+//        intent.putExtras(bundle);
         startActivity(intent);
     }
 }
