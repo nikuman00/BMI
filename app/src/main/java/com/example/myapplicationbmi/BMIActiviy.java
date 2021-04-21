@@ -87,7 +87,7 @@ public class BMIActiviy extends AppCompatActivity {
         pdataAdapter a = new pdataAdapter(p);
         recyclerView.setAdapter(a);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        //test0421
+        //test042101
 
     }
 }
